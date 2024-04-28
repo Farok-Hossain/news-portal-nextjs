@@ -1,3 +1,4 @@
+import LatestNews from "@/components/ui/LatestNews/LatestNews";
 import { Grid } from "@mui/material";
 
 const HomePage = () => {
@@ -5,7 +6,7 @@ const HomePage = () => {
     <>
       <Grid container spacing={2}>
         <Grid item xs={8}>
-          <h1>Latest news</h1>
+          <LatestNews></LatestNews>
         </Grid>
         <Grid item xs={4}>
           <h1>SideBar</h1>
