@@ -1,7 +1,13 @@
-const DynamicNewsPage = ({ params, searchParams }) => {
+import { getCategoryNews } from "@/utils/getCategoryNews";
+
+const DynamicNewsPage = async ({ params, searchParams }) => {
+  const { data } = getCategoryNews(searchParams.category);
+
   return (
     <div>
-      <h1>Dynamic news page: {searchParams.category}</h1>
+      <h1>
+        Total {searchParams.category} news: {data.length}
+      </h1>
     </div>
   );
 };
